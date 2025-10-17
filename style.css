@@ -1,53 +1,80 @@
-body {
+/* Arrière-plan animé galaxie */
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at center, #0a0a1f, #1b0034);
+  background: radial-gradient(circle at center, #1b0034, #000);
   color: white;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #6600ff, #ff0066);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(150, 0, 255, 0.5);
+  margin: auto;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #c69bff;
-  margin-bottom: 10px;
+  font-size: 3em;
+  background: linear-gradient(90deg, #e1b07e, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #cccccc;
 }
 
 .download-btn {
   display: inline-block;
-  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  background: linear-gradient(90deg, #2C3E50, #E1B07E);
   color: white;
   text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  margin-top: 30px;
-  transition: 0.3s;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(225, 176, 126, 0.5);
 }
 
 .download-btn:hover {
-  box-shadow: 0 0 25px #c69bff;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(225, 176, 126, 0.8);
+}
+
+.info {
+  margin-top: 25px;
+  font-size: 0.9em;
+  color: #bbb;
 }
 
 footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  margin-top: 60px;
+  font-size: 0.8em;
+  color: #999;
 }
