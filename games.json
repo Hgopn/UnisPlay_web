@@ -1,0 +1,18 @@
+[
+  {
+    "id": "slot",
+    "name": "Machine Slot",
+    "description": "Une machine à sous interactive reliée aux gifts TikTok.",
+    "url": "https://plateforme-v2.onrender.com/slot",
+    "status": "online",
+    "tags": ["live", "gifts", "rng"]
+  },
+  {
+    "id": "billes",
+    "name": "Course de billes",
+    "description": "Les viewers font avancer leur bille avec les likes/gifts.",
+    "url": "https://plateforme-v2.onrender.com/billes",
+    "status": "beta",
+    "tags": ["course", "live"]
+  }
+]
